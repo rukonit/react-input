@@ -1,0 +1,17 @@
+.body {
+    background: #f2f2f2;
+  }
+  
+.container  {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    height: auto;
+    width: 600px;
+    background: #8ccedf;
+    overflow: hidden;
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: 0 0 20px 8px #eea6a6;
+  }

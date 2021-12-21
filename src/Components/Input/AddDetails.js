@@ -1,5 +1,6 @@
 import Button from "../UI/Button";
 import {useState} from 'react'
+import styles from './ShowDetails.module.css'
 
 
 const AddDetails = (props) => {
@@ -27,7 +28,7 @@ const AddDetails = (props) => {
 
 
     return (
-        <div>
+        <div style={{padding: '10px'}}>
             <form onSubmit={submitHandler}>
                 <label htmlFor="name">Name: </label>
                 <input id="name" type="text" onChange={nameHandler}></input>
