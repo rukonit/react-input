@@ -1,0 +1,13 @@
+.round {
+    border: 1;
+    border-radius: 5px;
+    border-color: cadetblue;
+    padding: 5px;
+    background-color: aquamarine;
+    font-weight: bold;
+}
+
+.round:hover {
+    background-color: chartreuse;
+    font-weight: bolder;
+}

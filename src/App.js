@@ -1,23 +1,29 @@
 import logo from './logo.svg';
 import './App.css';
+import Button from './Components/UI/Button';
+import AddDetails from './Components/Input/AddDetails';
+import { useState } from 'react';
+import ShowDetails from './Components/Input/ShowDetails';
+
 
 function App() {
+
+  const [data, setData] = useState([])
+
+  const dataHandler = (newData) =>  {
+    setData(prevData => {
+      return [...prevData, newData]
+    }
+    )
+
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+     <AddDetails getData={dataHandler} />
+     {data.map(item => 
+       <ShowDetails details={item}></ShowDetails>
+     )}
     </div>
   );
 }
